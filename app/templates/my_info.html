@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h4>My Info:</h4>
+
+    <div class="card" style="width: 18rem;">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">{{ current_user.username }}</li>
+            <li class="list-group-item">{{ current_user.email }}</li>
+            <li class="list-group-item"><a href="{{ url_for('myposts') }}">My Posts</a></li>
+        </ul>
+    </div>
+
+{% endblock content %}

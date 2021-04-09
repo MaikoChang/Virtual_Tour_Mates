@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h4>Login</h4>
+<!-- Login Form goes Here -->
+<form action="" method='POST'>
+    {{ form.hidden_tag() }}
+    <div class="form-group">
+        <fieldset>
+            {{ form.username.label }}
+            {{ form.username(class='form-control', placeholder='Username') }}
+        </fieldset>
+        <fieldset>
+            {{ form.password.label }}
+            {{ form.password(class='form-control', placeholder='Password') }}
+        </fieldset>
+        <fieldset>
+            {{ form.remember_me(class='form-check-input') }}
+            {{ form.remember_me.label(class='form-check-label') }}
+        </fieldset>
+        {{ form.submit(class='btn btn-success') }}
+    </div>
+</form>
+{% endblock content %}
